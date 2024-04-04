@@ -6,8 +6,11 @@
 //
 
 #import "ViewController.h"
+#import "UIFont+Roboto.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) UILabel* label;
 
 @end
 
@@ -15,9 +18,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColor.greenColor;
+
+    self.label = [UILabel new];
+    self.label.text = @"hello world";
+    self.label.translatesAutoresizingMaskIntoConstraints = false;
+
+    
+    [self.view addSubview:self.label];
+    
+    self.label.font = [UIFont getRobotoFont:RobotoBold size:40];
+    self.view.backgroundColor = UIColor.redColor;
+    
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.label.frame = CGRectMake(150, 400, 200, 44);
+}
 
 @end
  
