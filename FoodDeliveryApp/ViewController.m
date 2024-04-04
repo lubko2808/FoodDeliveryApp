@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "UIFont+Roboto.h"
+#import "UIColor+AppColors.h"
 
 @interface ViewController ()
 
@@ -27,7 +28,7 @@
     [self.view addSubview:self.label];
     
     self.label.font = [UIFont getRobotoFont:RobotoBold size:40];
-    self.view.backgroundColor = UIColor.redColor;
+    self.view.backgroundColor = [UIColor background];
     
 }
 

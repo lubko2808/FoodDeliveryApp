@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5534FD2BBF2C610028D269 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5534FC2BBF2C610028D269 /* UIColor+Hex.m */; };
+		3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5534FF2BBF2DB80028D269 /* UIColor+AppColors.m */; };
 		3E930B542BBDE31300131028 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B532BBDE31300131028 /* AppDelegate.m */; };
 		3E930B572BBDE31300131028 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B562BBDE31300131028 /* SceneDelegate.m */; };
 		3E930B5A2BBDE31300131028 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B592BBDE31300131028 /* ViewController.m */; };
@@ -30,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E5534FB2BBF2C610028D269 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		3E5534FC2BBF2C610028D269 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		3E5534FE2BBF2DB80028D269 /* UIColor+AppColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColors.h"; sourceTree = "<group>"; };
+		3E5534FF2BBF2DB80028D269 /* UIColor+AppColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColors.m"; sourceTree = "<group>"; };
 		3E930B4F2BBDE31300131028 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E930B522BBDE31300131028 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E930B532BBDE31300131028 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -145,6 +151,10 @@
 			children = (
 				3E930B892BBDEACF00131028 /* UIFont+Roboto.h */,
 				3E930B8A2BBDEACF00131028 /* UIFont+Roboto.m */,
+				3E5534FB2BBF2C610028D269 /* UIColor+Hex.h */,
+				3E5534FC2BBF2C610028D269 /* UIColor+Hex.m */,
+				3E5534FE2BBF2DB80028D269 /* UIColor+AppColors.h */,
+				3E5534FF2BBF2DB80028D269 /* UIColor+AppColors.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,7 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E930B5A2BBDE31300131028 /* ViewController.m in Sources */,
+				3E5534FD2BBF2C610028D269 /* UIColor+Hex.m in Sources */,
 				3E930B542BBDE31300131028 /* AppDelegate.m in Sources */,
+				3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */,
 				3E930B652BBDE31400131028 /* main.m in Sources */,
 				3E930B8B2BBDEACF00131028 /* UIFont+Roboto.m in Sources */,
 				3E930B572BBDE31300131028 /* SceneDelegate.m in Sources */,
