@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E5534FD2BBF2C610028D269 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5534FC2BBF2C610028D269 /* UIColor+Hex.m */; };
 		3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5534FF2BBF2DB80028D269 /* UIColor+AppColors.m */; };
+		3E55350B2BBF36BF0028D269 /* Coordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E55350A2BBF36BF0028D269 /* Coordinator.m */; };
 		3E930B542BBDE31300131028 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B532BBDE31300131028 /* AppDelegate.m */; };
 		3E930B572BBDE31300131028 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B562BBDE31300131028 /* SceneDelegate.m */; };
 		3E930B5A2BBDE31300131028 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B592BBDE31300131028 /* ViewController.m */; };
@@ -29,6 +30,13 @@
 		3E930B862BBDE99B00131028 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E930B792BBDE99B00131028 /* Roboto-Thin.ttf */; };
 		3E930B872BBDE99B00131028 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E930B7A2BBDE99B00131028 /* Roboto-Black.ttf */; };
 		3E930B8B2BBDEACF00131028 /* UIFont+Roboto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B8A2BBDEACF00131028 /* UIFont+Roboto.m */; };
+		3EEAFCD12BC019AE00A1B236 /* AppCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCD02BC019AE00A1B236 /* AppCoordinator.m */; };
+		3EEAFCD42BC01FB700A1B236 /* OnboardingCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCD32BC01FB700A1B236 /* OnboardingCoordinator.m */; };
+		3EEAFCDA2BC02A6A00A1B236 /* HomeCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCD92BC02A6A00A1B236 /* HomeCoordinator.m */; };
+		3EEAFCDD2BC02A7800A1B236 /* OrderCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCDC2BC02A7800A1B236 /* OrderCoordinator.m */; };
+		3EEAFCE02BC02A9000A1B236 /* ListCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCDF2BC02A9000A1B236 /* ListCoordinator.m */; };
+		3EEAFCE32BC02A9D00A1B236 /* ProfileCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCE22BC02A9D00A1B236 /* ProfileCoordinator.m */; };
+		3EEAFCE62BC02B4400A1B236 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCE52BC02B4400A1B236 /* TabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +44,9 @@
 		3E5534FC2BBF2C610028D269 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		3E5534FE2BBF2DB80028D269 /* UIColor+AppColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColors.h"; sourceTree = "<group>"; };
 		3E5534FF2BBF2DB80028D269 /* UIColor+AppColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColors.m"; sourceTree = "<group>"; };
+		3E5535042BBF32730028D269 /* CoordinatorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoordinatorProtocol.h; sourceTree = "<group>"; };
+		3E5535092BBF36BF0028D269 /* Coordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinator.h; sourceTree = "<group>"; };
+		3E55350A2BBF36BF0028D269 /* Coordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coordinator.m; sourceTree = "<group>"; };
 		3E930B4F2BBDE31300131028 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E930B522BBDE31300131028 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E930B532BBDE31300131028 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +73,21 @@
 		3E930B7A2BBDE99B00131028 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		3E930B892BBDEACF00131028 /* UIFont+Roboto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Roboto.h"; sourceTree = "<group>"; };
 		3E930B8A2BBDEACF00131028 /* UIFont+Roboto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Roboto.m"; sourceTree = "<group>"; };
+		3EEAFCCF2BC019AE00A1B236 /* AppCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCoordinator.h; sourceTree = "<group>"; };
+		3EEAFCD02BC019AE00A1B236 /* AppCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCoordinator.m; sourceTree = "<group>"; };
+		3EEAFCD22BC01FB700A1B236 /* OnboardingCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnboardingCoordinator.h; sourceTree = "<group>"; };
+		3EEAFCD32BC01FB700A1B236 /* OnboardingCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnboardingCoordinator.m; sourceTree = "<group>"; };
+		3EEAFCD52BC0269D00A1B236 /* CoordinatorFinishDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoordinatorFinishDelegate.h; sourceTree = "<group>"; };
+		3EEAFCD82BC02A6A00A1B236 /* HomeCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCoordinator.h; sourceTree = "<group>"; };
+		3EEAFCD92BC02A6A00A1B236 /* HomeCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCoordinator.m; sourceTree = "<group>"; };
+		3EEAFCDB2BC02A7800A1B236 /* OrderCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCoordinator.h; sourceTree = "<group>"; };
+		3EEAFCDC2BC02A7800A1B236 /* OrderCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCoordinator.m; sourceTree = "<group>"; };
+		3EEAFCDE2BC02A9000A1B236 /* ListCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListCoordinator.h; sourceTree = "<group>"; };
+		3EEAFCDF2BC02A9000A1B236 /* ListCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListCoordinator.m; sourceTree = "<group>"; };
+		3EEAFCE12BC02A9D00A1B236 /* ProfileCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileCoordinator.h; sourceTree = "<group>"; };
+		3EEAFCE22BC02A9D00A1B236 /* ProfileCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileCoordinator.m; sourceTree = "<group>"; };
+		3EEAFCE42BC02B4400A1B236 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		3EEAFCE52BC02B4400A1B236 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +101,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E5535012BBF32300028D269 /* NavigationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3E5535032BBF32560028D269 /* Controllers */,
+				3E5535022BBF32400028D269 /* Coordinators */,
+			);
+			path = NavigationLayer;
+			sourceTree = "<group>";
+		};
+		3E5535022BBF32400028D269 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				3E5535042BBF32730028D269 /* CoordinatorProtocol.h */,
+				3EEAFCD52BC0269D00A1B236 /* CoordinatorFinishDelegate.h */,
+				3E5535092BBF36BF0028D269 /* Coordinator.h */,
+				3E55350A2BBF36BF0028D269 /* Coordinator.m */,
+				3EEAFCCF2BC019AE00A1B236 /* AppCoordinator.h */,
+				3EEAFCD02BC019AE00A1B236 /* AppCoordinator.m */,
+				3EEAFCD22BC01FB700A1B236 /* OnboardingCoordinator.h */,
+				3EEAFCD32BC01FB700A1B236 /* OnboardingCoordinator.m */,
+				3EEAFCD82BC02A6A00A1B236 /* HomeCoordinator.h */,
+				3EEAFCD92BC02A6A00A1B236 /* HomeCoordinator.m */,
+				3EEAFCDB2BC02A7800A1B236 /* OrderCoordinator.h */,
+				3EEAFCDC2BC02A7800A1B236 /* OrderCoordinator.m */,
+				3EEAFCDE2BC02A9000A1B236 /* ListCoordinator.h */,
+				3EEAFCDF2BC02A9000A1B236 /* ListCoordinator.m */,
+				3EEAFCE12BC02A9D00A1B236 /* ProfileCoordinator.h */,
+				3EEAFCE22BC02A9D00A1B236 /* ProfileCoordinator.m */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		3E5535032BBF32560028D269 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3EEAFCE42BC02B4400A1B236 /* TabBarController.h */,
+				3EEAFCE52BC02B4400A1B236 /* TabBarController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		3E930B462BBDE31200131028 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +161,7 @@
 		3E930B512BBDE31300131028 /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				3E5535012BBF32300028D269 /* NavigationLayer */,
 				3E930B6B2BBDE97F00131028 /* Resources */,
 				3E930B522BBDE31300131028 /* AppDelegate.h */,
 				3E930B532BBDE31300131028 /* AppDelegate.m */,
@@ -241,11 +309,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EEAFCE02BC02A9000A1B236 /* ListCoordinator.m in Sources */,
 				3E930B5A2BBDE31300131028 /* ViewController.m in Sources */,
 				3E5534FD2BBF2C610028D269 /* UIColor+Hex.m in Sources */,
 				3E930B542BBDE31300131028 /* AppDelegate.m in Sources */,
+				3EEAFCD12BC019AE00A1B236 /* AppCoordinator.m in Sources */,
 				3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */,
+				3EEAFCE32BC02A9D00A1B236 /* ProfileCoordinator.m in Sources */,
+				3EEAFCDD2BC02A7800A1B236 /* OrderCoordinator.m in Sources */,
+				3E55350B2BBF36BF0028D269 /* Coordinator.m in Sources */,
 				3E930B652BBDE31400131028 /* main.m in Sources */,
+				3EEAFCD42BC01FB700A1B236 /* OnboardingCoordinator.m in Sources */,
+				3EEAFCDA2BC02A6A00A1B236 /* HomeCoordinator.m in Sources */,
+				3EEAFCE62BC02B4400A1B236 /* TabBarController.m in Sources */,
 				3E930B8B2BBDEACF00131028 /* UIFont+Roboto.m in Sources */,
 				3E930B572BBDE31300131028 /* SceneDelegate.m in Sources */,
 			);

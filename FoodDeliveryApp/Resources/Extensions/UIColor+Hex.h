@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (hex)
 
-+(UIColor*)hexRgbValue:(UInt64)rgbValue;
++(UIColor*)hexFromRgb:(UInt64)rgbValue;
 
 @end
 

@@ -7,8 +7,11 @@
 
 #import "SceneDelegate.h"
 #import "ViewController.h"
+#import "AppCoordinator.h"
 
 @interface SceneDelegate ()
+
+@property (nonatomic, strong) AppCoordinator* coordinator;
 
 @end
 
@@ -23,11 +26,17 @@
     } else { return; }
     
     UIWindow* window = [[UIWindow alloc] initWithWindowScene:windowScene];
-    UIViewController* viewController = [ViewController new];
-    UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+//    UIViewController* viewController = [ViewController new];
+    UINavigationController* navigationController = [UINavigationController new];
     window.rootViewController = navigationController;
     self.window = window;
     [window makeKeyAndVisible];
+    self.coordinator = [[AppCoordinator alloc] initWithChildCoordinators:[NSMutableArray new]
+                                                                    type:CoordinatorTypeApp
+                                                    navigationController:navigationController
+                                                          finishDelegate:nil];
+    [self.coordinator start];
+    
 }
 
 

@@ -30,6 +30,7 @@
     self.label.font = [UIFont getRobotoFont:RobotoBold size:40];
     self.view.backgroundColor = [UIColor background];
     
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
