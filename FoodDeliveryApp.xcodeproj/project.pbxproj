@@ -32,6 +32,11 @@
 		3E930B8B2BBDEACF00131028 /* UIFont+Roboto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B8A2BBDEACF00131028 /* UIFont+Roboto.m */; };
 		3EEAFCD12BC019AE00A1B236 /* AppCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCD02BC019AE00A1B236 /* AppCoordinator.m */; };
 		3EEAFCD42BC01FB700A1B236 /* OnboardingCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCD32BC01FB700A1B236 /* OnboardingCoordinator.m */; };
+		3EEAFCDA2BC02A6A00A1B236 /* HomeCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCD92BC02A6A00A1B236 /* HomeCoordinator.m */; };
+		3EEAFCDD2BC02A7800A1B236 /* OrderCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCDC2BC02A7800A1B236 /* OrderCoordinator.m */; };
+		3EEAFCE02BC02A9000A1B236 /* ListCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCDF2BC02A9000A1B236 /* ListCoordinator.m */; };
+		3EEAFCE32BC02A9D00A1B236 /* ProfileCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCE22BC02A9D00A1B236 /* ProfileCoordinator.m */; };
+		3EEAFCE62BC02B4400A1B236 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCE52BC02B4400A1B236 /* TabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +78,16 @@
 		3EEAFCD22BC01FB700A1B236 /* OnboardingCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnboardingCoordinator.h; sourceTree = "<group>"; };
 		3EEAFCD32BC01FB700A1B236 /* OnboardingCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnboardingCoordinator.m; sourceTree = "<group>"; };
 		3EEAFCD52BC0269D00A1B236 /* CoordinatorFinishDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoordinatorFinishDelegate.h; sourceTree = "<group>"; };
+		3EEAFCD82BC02A6A00A1B236 /* HomeCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCoordinator.h; sourceTree = "<group>"; };
+		3EEAFCD92BC02A6A00A1B236 /* HomeCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCoordinator.m; sourceTree = "<group>"; };
+		3EEAFCDB2BC02A7800A1B236 /* OrderCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCoordinator.h; sourceTree = "<group>"; };
+		3EEAFCDC2BC02A7800A1B236 /* OrderCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCoordinator.m; sourceTree = "<group>"; };
+		3EEAFCDE2BC02A9000A1B236 /* ListCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListCoordinator.h; sourceTree = "<group>"; };
+		3EEAFCDF2BC02A9000A1B236 /* ListCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListCoordinator.m; sourceTree = "<group>"; };
+		3EEAFCE12BC02A9D00A1B236 /* ProfileCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileCoordinator.h; sourceTree = "<group>"; };
+		3EEAFCE22BC02A9D00A1B236 /* ProfileCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileCoordinator.m; sourceTree = "<group>"; };
+		3EEAFCE42BC02B4400A1B236 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		3EEAFCE52BC02B4400A1B236 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +121,14 @@
 				3EEAFCD02BC019AE00A1B236 /* AppCoordinator.m */,
 				3EEAFCD22BC01FB700A1B236 /* OnboardingCoordinator.h */,
 				3EEAFCD32BC01FB700A1B236 /* OnboardingCoordinator.m */,
+				3EEAFCD82BC02A6A00A1B236 /* HomeCoordinator.h */,
+				3EEAFCD92BC02A6A00A1B236 /* HomeCoordinator.m */,
+				3EEAFCDB2BC02A7800A1B236 /* OrderCoordinator.h */,
+				3EEAFCDC2BC02A7800A1B236 /* OrderCoordinator.m */,
+				3EEAFCDE2BC02A9000A1B236 /* ListCoordinator.h */,
+				3EEAFCDF2BC02A9000A1B236 /* ListCoordinator.m */,
+				3EEAFCE12BC02A9D00A1B236 /* ProfileCoordinator.h */,
+				3EEAFCE22BC02A9D00A1B236 /* ProfileCoordinator.m */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -113,6 +136,8 @@
 		3E5535032BBF32560028D269 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3EEAFCE42BC02B4400A1B236 /* TabBarController.h */,
+				3EEAFCE52BC02B4400A1B236 /* TabBarController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -284,14 +309,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EEAFCE02BC02A9000A1B236 /* ListCoordinator.m in Sources */,
 				3E930B5A2BBDE31300131028 /* ViewController.m in Sources */,
 				3E5534FD2BBF2C610028D269 /* UIColor+Hex.m in Sources */,
 				3E930B542BBDE31300131028 /* AppDelegate.m in Sources */,
 				3EEAFCD12BC019AE00A1B236 /* AppCoordinator.m in Sources */,
 				3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */,
+				3EEAFCE32BC02A9D00A1B236 /* ProfileCoordinator.m in Sources */,
+				3EEAFCDD2BC02A7800A1B236 /* OrderCoordinator.m in Sources */,
 				3E55350B2BBF36BF0028D269 /* Coordinator.m in Sources */,
 				3E930B652BBDE31400131028 /* main.m in Sources */,
 				3EEAFCD42BC01FB700A1B236 /* OnboardingCoordinator.m in Sources */,
+				3EEAFCDA2BC02A6A00A1B236 /* HomeCoordinator.m in Sources */,
+				3EEAFCE62BC02B4400A1B236 /* TabBarController.m in Sources */,
 				3E930B8B2BBDEACF00131028 /* UIFont+Roboto.m in Sources */,
 				3E930B572BBDE31300131028 /* SceneDelegate.m in Sources */,
 			);

@@ -31,11 +31,11 @@
     window.rootViewController = navigationController;
     self.window = window;
     [window makeKeyAndVisible];
-    AppCoordinator* appCoordinator = [[AppCoordinator alloc] initWithChildCoordinators:[NSMutableArray new]
-                                                                                  type:CoordinatorTypeApp
-                                                                  navigationController:navigationController
-                                                                        finishDelegate:nil];
-    [appCoordinator start];
+    self.coordinator = [[AppCoordinator alloc] initWithChildCoordinators:[NSMutableArray new]
+                                                                    type:CoordinatorTypeApp
+                                                    navigationController:navigationController
+                                                          finishDelegate:nil];
+    [self.coordinator start];
     
 }
 
