@@ -5,7 +5,8 @@
 //  Created by Lubomyr Chorniak on 04.04.2024.
 //
 
-#import <UIKit/UIKit.n>
+#import <UIKit/UIKit.h>
+#import "CoordinatorFinishDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,7 +22,7 @@ typedef NS_ENUM(NSInteger, CoordinatorType) {
 @protocol CoordinatorProtocol <NSObject>
 
 @property (nonatomic, strong, nonnull) NSMutableArray<id<CoordinatorProtocol>> *childCoordinators;
-@property (nonatomic, assign, readonly, nonnull) CoordinatorType type;
+@property (nonatomic, assign, readonly) CoordinatorType type;
 @property (nonatomic, strong, nullable) UINavigationController *navigationController;
 @property (nonatomic, weak) id<CoordinatorFinishDelegate> finishDelegate;
 
@@ -30,9 +31,9 @@ typedef NS_ENUM(NSInteger, CoordinatorType) {
 
 @end
 
-@protocol CoordinatorFinishDelegate <NSObject>
+@protocol TabBarCoordinator <NSObject, CoordinatorProtocol>
 
--(void)coordinatorDidFinishChildCoordinators: CoordinatorProtocol;
+@property (nonatomic, strong) UITabBarController* tabBarController;
 
 @end
 

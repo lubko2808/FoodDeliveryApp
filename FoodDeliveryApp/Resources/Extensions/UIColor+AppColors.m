@@ -11,16 +11,16 @@
 @implementation UIColor (appColors)
 
 +(UIColor*)accentOrange {
-    return [UIColor hexRgbValue:0xD35400];
+    return [UIColor hexFromRgb:0xD35400];
 }
 +(UIColor*)grey {
-    return [UIColor hexRgbValue:0xECF0F1];
+    return [UIColor hexFromRgb:0xECF0F1];
 }
 +(UIColor*)black {
-    return [UIColor hexRgbValue:0x000000];
+    return [UIColor hexFromRgb:0x000000];
 }
 +(UIColor*)background {
-    return [UIColor hexRgbValue:0xE5E5E5];
+    return [UIColor hexFromRgb:0xE5E5E5];
 }
 
 @end
