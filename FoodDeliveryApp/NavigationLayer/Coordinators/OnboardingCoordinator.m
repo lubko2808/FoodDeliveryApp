@@ -8,6 +8,7 @@
 #import "OnboardingCoordinator.h"
 #import "OnboardingViewPresenter.h"
 #import "OnboardingViewController.h"
+#import "OnboardingPartViewController.h"
 
 @implementation OnboardingCoordinator
 
@@ -21,18 +22,29 @@
 
 - (void)showOnboarding {
     NSMutableArray<UIViewController*>* pages = [NSMutableArray new];
-    UIViewController* firstVC = [UIViewController new];
-    firstVC.view.backgroundColor = [UIColor purpleColor];
-    UIViewController* secondVC = [UIViewController new];
-    secondVC.view.backgroundColor = [UIColor yellowColor];
-    UIViewController* thirdVC = [UIViewController new];
-    thirdVC.view.backgroundColor = [UIColor redColor];
+    
+    OnboardingPartViewController* firstVC = [[OnboardingPartViewController alloc] initWithIconImage:[UIImage imageNamed:@"chickenLeg"] titleText:@"Delicious Food" descriptionText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit."];
+    
+    OnboardingPartViewController* secondVC = [[OnboardingPartViewController alloc] initWithIconImage:[UIImage imageNamed:@"shipped"]
+                                                                                          titleText:@"Fast Shipping"
+                                                                                    descriptionText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit."];
+    
+    OnboardingPartViewController* thirdVC = [[OnboardingPartViewController alloc] initWithIconImage:[UIImage imageNamed:@"medal"]
+                                                                                          titleText:@"Certificate Food"
+                                                                                    descriptionText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit."];
+    
+    OnboardingPartViewController* fourthVC = [[OnboardingPartViewController alloc] initWithIconImage:[UIImage imageNamed:@"creditCard"]
+                                                                                          titleText:@"Payment Online"
+                                                                                    descriptionText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit."];
+
     [pages addObject:firstVC];
     [pages addObject:secondVC];
     [pages addObject:thirdVC];
+    [pages addObject:fourthVC];
     OnboardingViewPresenter* presenter = [[OnboardingViewPresenter alloc] initWithCoordinator:self];
     OnboardingViewController* viewController = [[OnboardingViewController alloc] initWithPages:pages viewOutput:presenter];
     [self.navigationController pushViewController:viewController animated:YES];
 } 
 
 @end
+

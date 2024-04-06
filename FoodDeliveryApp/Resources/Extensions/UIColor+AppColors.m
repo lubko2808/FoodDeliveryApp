@@ -23,4 +23,8 @@
     return [UIColor hexFromRgb:0xE5E5E5];
 }
 
++(UIColor*)white {
+    return UIColor.whiteColor;
+}
+
 @end
