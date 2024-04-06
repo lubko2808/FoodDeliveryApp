@@ -16,8 +16,7 @@
 @implementation AppCoordinator
 
 - (void)start {
-//    [self showOnboardingFlow];
-    [self showMainFlow];
+    [self showOnboardingFlow];
 }
 
 - (void)finish {

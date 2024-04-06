@@ -37,6 +37,8 @@
 		3EEAFCE02BC02A9000A1B236 /* ListCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCDF2BC02A9000A1B236 /* ListCoordinator.m */; };
 		3EEAFCE32BC02A9D00A1B236 /* ProfileCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCE22BC02A9D00A1B236 /* ProfileCoordinator.m */; };
 		3EEAFCE62BC02B4400A1B236 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCE52BC02B4400A1B236 /* TabBarController.m */; };
+		3EEAFCEB2BC04E7100A1B236 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCEA2BC04E7100A1B236 /* OnboardingViewController.m */; };
+		3EEAFCEE2BC04EE100A1B236 /* OnboardingViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAFCED2BC04EE100A1B236 /* OnboardingViewPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,10 @@
 		3EEAFCE22BC02A9D00A1B236 /* ProfileCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileCoordinator.m; sourceTree = "<group>"; };
 		3EEAFCE42BC02B4400A1B236 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		3EEAFCE52BC02B4400A1B236 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		3EEAFCE92BC04E7100A1B236 /* OnboardingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
+		3EEAFCEA2BC04E7100A1B236 /* OnboardingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
+		3EEAFCEC2BC04EE100A1B236 /* OnboardingViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnboardingViewPresenter.h; sourceTree = "<group>"; };
+		3EEAFCED2BC04EE100A1B236 /* OnboardingViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewPresenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,7 @@
 		3E930B512BBDE31300131028 /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				3EEAFCE72BC04E2700A1B236 /* UILayer */,
 				3E5535012BBF32300028D269 /* NavigationLayer */,
 				3E930B6B2BBDE97F00131028 /* Resources */,
 				3E930B522BBDE31300131028 /* AppDelegate.h */,
@@ -225,6 +232,25 @@
 				3E5534FF2BBF2DB80028D269 /* UIColor+AppColors.m */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3EEAFCE72BC04E2700A1B236 /* UILayer */ = {
+			isa = PBXGroup;
+			children = (
+				3EEAFCE82BC04E5B00A1B236 /* Onboarding */,
+			);
+			path = UILayer;
+			sourceTree = "<group>";
+		};
+		3EEAFCE82BC04E5B00A1B236 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3EEAFCE92BC04E7100A1B236 /* OnboardingViewController.h */,
+				3EEAFCEA2BC04E7100A1B236 /* OnboardingViewController.m */,
+				3EEAFCEC2BC04EE100A1B236 /* OnboardingViewPresenter.h */,
+				3EEAFCED2BC04EE100A1B236 /* OnboardingViewPresenter.m */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +342,8 @@
 				3EEAFCD12BC019AE00A1B236 /* AppCoordinator.m in Sources */,
 				3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */,
 				3EEAFCE32BC02A9D00A1B236 /* ProfileCoordinator.m in Sources */,
+				3EEAFCEE2BC04EE100A1B236 /* OnboardingViewPresenter.m in Sources */,
+				3EEAFCEB2BC04E7100A1B236 /* OnboardingViewController.m in Sources */,
 				3EEAFCDD2BC02A7800A1B236 /* OrderCoordinator.m in Sources */,
 				3E55350B2BBF36BF0028D269 /* Coordinator.m in Sources */,
 				3E930B652BBDE31400131028 /* main.m in Sources */,
