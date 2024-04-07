@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(UIColor*)grey;
 +(UIColor*)black;
 +(UIColor*)background;
++(UIColor*)white;
 
 @end
 
