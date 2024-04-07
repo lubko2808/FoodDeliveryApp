@@ -9,17 +9,11 @@
 #import "UIColor+AppColors.h"
 #import "UIFont+Roboto.h"
 
-//typedef NS_ENUM(NSInteger, PageNumber) {
-//    PageNumber1,
-//    PageNumber2,
-//    PageNumber3,
-//    PageNumber4
-//};
-
 @interface OnboardingViewController ()
 
 // MARK: - Properties
 @property (nonatomic, strong) NSArray<UIViewController*>* pages;
+@property (nonatomic) NSInteger currentPageIndex;
 
 // MARK: - Views
 @property (nonatomic, strong) UIPageViewController* pageViewController;
@@ -50,6 +44,7 @@ static NSInteger const cPage4 = 3;
         _pages = pages;
         _viewOutput = viewOuput;
         _bottomButton = [UIButton new];
+        _currentPageIndex = 0;
             
     }
     return self;
@@ -70,7 +65,9 @@ static NSInteger const cPage4 = 3;
             self.pageControl.currentPage = 3;
             [self.pageViewController setViewControllers:@[self.pages[3]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
             [self.bottomButton setTitle:@"Cool!" forState:UIControlStateNormal];
+            break;
         case cPage4:
+            [self.viewOutput onboardingFinished];
             NSLog(@"exit");
         default:
             break;
@@ -118,7 +115,7 @@ static NSInteger const cPage4 = 3;
     self.bottomButton.titleLabel.font = [UIFont getRobotoFont:RobotoBold size:18];
     self.bottomButton.titleLabel.textColor = [UIColor black];
     [self.bottomButton setTitleColor:[UIColor black] forState:UIControlStateNormal];
-    self.bottomButton.layer.cornerRadius = 16;
+    self.bottomButton.layer.cornerRadius = 24;
     [self.bottomButton setTitle:@"Next" forState:UIControlStateNormal];
     [self.bottomButton addTarget:self action:@selector(onButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     
@@ -158,12 +155,21 @@ static NSInteger const cPage4 = 3;
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
     NSInteger index = [self.pages indexOfObject:pendingViewControllers.firstObject];
-    self.pageControl.currentPage = index;
-    if (index == self.pages.count - 1) {
-        [self.bottomButton setTitle:@"Cool!" forState:UIControlStateNormal];
-    } else {
-        [self.bottomButton setTitle:@"Next" forState:UIControlStateNormal];
+    self.currentPageIndex = index;
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
+    
+    if (completed) {
+        self.currentPageIndex = self.currentPageIndex;
+        self.pageControl.currentPage = self.currentPageIndex;
+        if (self.currentPageIndex == self.pages.count - 1) {
+            [self.bottomButton setTitle:@"Cool!" forState:UIControlStateNormal];
+        } else {
+            [self.bottomButton setTitle:@"Next" forState:UIControlStateNormal];
+        }
     }
+    
 }
 
 

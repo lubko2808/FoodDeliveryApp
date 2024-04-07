@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OnboardingViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
-@property (nonatomic, weak) id<OnboardingViewOutput> viewOutput;
+@property (nonatomic, strong) id<OnboardingViewOutput> viewOutput;
 
 - (instancetype)initWithPages:(NSArray<UIViewController*>*)pages viewOutput:(OnboardingViewPresenter*)viewOuput;
 
