@@ -6,6 +6,7 @@
 //
 
 #import "OnboardingViewPresenter.h"
+#import "UserStorage.h"
 
 @implementation OnboardingViewPresenter
 
@@ -18,6 +19,7 @@
 }
 
 - (void)onboardingFinished {
+    [UserStorage sharedInstance].passedOnboarding = YES;
     [self.coordinator finish];
 }
 
