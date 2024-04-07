@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3E3565332BC1840700215AF3 /* OnboardingPartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3565322BC1840700215AF3 /* OnboardingPartViewController.m */; };
+		3E3565372BC1EABB00215AF3 /* UserStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3565362BC1EABB00215AF3 /* UserStorage.m */; };
 		3E5534FD2BBF2C610028D269 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5534FC2BBF2C610028D269 /* UIColor+Hex.m */; };
 		3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5534FF2BBF2DB80028D269 /* UIColor+AppColors.m */; };
 		3E55350B2BBF36BF0028D269 /* Coordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E55350A2BBF36BF0028D269 /* Coordinator.m */; };
+		3E695D682BC28CFB0041E666 /* SceneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E695D672BC28CFB0041E666 /* SceneFactory.m */; };
 		3E930B542BBDE31300131028 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B532BBDE31300131028 /* AppDelegate.m */; };
 		3E930B572BBDE31300131028 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B562BBDE31300131028 /* SceneDelegate.m */; };
 		3E930B5A2BBDE31300131028 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B592BBDE31300131028 /* ViewController.m */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		3E3565312BC1840700215AF3 /* OnboardingPartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnboardingPartViewController.h; sourceTree = "<group>"; };
 		3E3565322BC1840700215AF3 /* OnboardingPartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnboardingPartViewController.m; sourceTree = "<group>"; };
+		3E3565352BC1EABB00215AF3 /* UserStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserStorage.h; sourceTree = "<group>"; };
+		3E3565362BC1EABB00215AF3 /* UserStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserStorage.m; sourceTree = "<group>"; };
 		3E5534FB2BBF2C610028D269 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		3E5534FC2BBF2C610028D269 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		3E5534FE2BBF2DB80028D269 /* UIColor+AppColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColors.h"; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 		3E5535042BBF32730028D269 /* CoordinatorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoordinatorProtocol.h; sourceTree = "<group>"; };
 		3E5535092BBF36BF0028D269 /* Coordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinator.h; sourceTree = "<group>"; };
 		3E55350A2BBF36BF0028D269 /* Coordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coordinator.m; sourceTree = "<group>"; };
+		3E695D662BC28CFB0041E666 /* SceneFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneFactory.h; sourceTree = "<group>"; };
+		3E695D672BC28CFB0041E666 /* SceneFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneFactory.m; sourceTree = "<group>"; };
 		3E930B4F2BBDE31300131028 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E930B522BBDE31300131028 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E930B532BBDE31300131028 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E3565342BC1EAA300215AF3 /* ServicesLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3E3565352BC1EABB00215AF3 /* UserStorage.h */,
+				3E3565362BC1EABB00215AF3 /* UserStorage.m */,
+			);
+			path = ServicesLayer;
+			sourceTree = "<group>";
+		};
 		3E5535012BBF32300028D269 /* NavigationLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +166,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		3E695D652BC28CE00041E666 /* SceneFactory */ = {
+			isa = PBXGroup;
+			children = (
+				3E695D662BC28CFB0041E666 /* SceneFactory.h */,
+				3E695D672BC28CFB0041E666 /* SceneFactory.m */,
+			);
+			path = SceneFactory;
+			sourceTree = "<group>";
+		};
 		3E930B462BBDE31200131028 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +194,7 @@
 		3E930B512BBDE31300131028 /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				3E3565342BC1EAA300215AF3 /* ServicesLayer */,
 				3EEAFCE72BC04E2700A1B236 /* UILayer */,
 				3E5535012BBF32300028D269 /* NavigationLayer */,
 				3E930B6B2BBDE97F00131028 /* Resources */,
@@ -240,6 +265,7 @@
 		3EEAFCE72BC04E2700A1B236 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				3E695D652BC28CE00041E666 /* SceneFactory */,
 				3EEAFCE82BC04E5B00A1B236 /* Onboarding */,
 			);
 			path = UILayer;
@@ -344,6 +370,7 @@
 				3E930B5A2BBDE31300131028 /* ViewController.m in Sources */,
 				3E5534FD2BBF2C610028D269 /* UIColor+Hex.m in Sources */,
 				3E930B542BBDE31300131028 /* AppDelegate.m in Sources */,
+				3E3565372BC1EABB00215AF3 /* UserStorage.m in Sources */,
 				3EEAFCD12BC019AE00A1B236 /* AppCoordinator.m in Sources */,
 				3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */,
 				3EEAFCE32BC02A9D00A1B236 /* ProfileCoordinator.m in Sources */,
@@ -358,6 +385,7 @@
 				3EEAFCE62BC02B4400A1B236 /* TabBarController.m in Sources */,
 				3E930B8B2BBDEACF00131028 /* UIFont+Roboto.m in Sources */,
 				3E930B572BBDE31300131028 /* SceneDelegate.m in Sources */,
+				3E695D682BC28CFB0041E666 /* SceneFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "OnboardingViewPresenter.h"
 #import "OnboardingViewController.h"
 #import "OnboardingPartViewController.h"
+#import "SceneFactory.h"
 
 @implementation OnboardingCoordinator
 
@@ -17,32 +18,11 @@
 }
 
 - (void)finish {
-    NSLog(@"OnboardingCoordinator finished");
+    [self.finishDelegate coordinatorDidFinishChildCoordinator:self];
 }
 
 - (void)showOnboarding {
-    NSMutableArray<UIViewController*>* pages = [NSMutableArray new];
-    
-    OnboardingPartViewController* firstVC = [[OnboardingPartViewController alloc] initWithIconImage:[UIImage imageNamed:@"chickenLeg"] titleText:@"Delicious Food" descriptionText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit."];
-    
-    OnboardingPartViewController* secondVC = [[OnboardingPartViewController alloc] initWithIconImage:[UIImage imageNamed:@"shipped"]
-                                                                                          titleText:@"Fast Shipping"
-                                                                                    descriptionText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit."];
-    
-    OnboardingPartViewController* thirdVC = [[OnboardingPartViewController alloc] initWithIconImage:[UIImage imageNamed:@"medal"]
-                                                                                          titleText:@"Certificate Food"
-                                                                                    descriptionText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit."];
-    
-    OnboardingPartViewController* fourthVC = [[OnboardingPartViewController alloc] initWithIconImage:[UIImage imageNamed:@"creditCard"]
-                                                                                          titleText:@"Payment Online"
-                                                                                    descriptionText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit."];
-
-    [pages addObject:firstVC];
-    [pages addObject:secondVC];
-    [pages addObject:thirdVC];
-    [pages addObject:fourthVC];
-    OnboardingViewPresenter* presenter = [[OnboardingViewPresenter alloc] initWithCoordinator:self];
-    OnboardingViewController* viewController = [[OnboardingViewController alloc] initWithPages:pages viewOutput:presenter];
+    OnboardingViewController* viewController = [SceneFactory makeOnboardingSceneWithCoordinator:self];
     [self.navigationController pushViewController:viewController animated:YES];
 } 
 
