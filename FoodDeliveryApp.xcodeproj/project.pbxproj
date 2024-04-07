@@ -13,6 +13,9 @@
 		3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5534FF2BBF2DB80028D269 /* UIColor+AppColors.m */; };
 		3E55350B2BBF36BF0028D269 /* Coordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E55350A2BBF36BF0028D269 /* Coordinator.m */; };
 		3E695D682BC28CFB0041E666 /* SceneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E695D672BC28CFB0041E666 /* SceneFactory.m */; };
+		3E695D6C2BC2B3140041E666 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E695D6B2BC2B3140041E666 /* LoginViewController.m */; };
+		3E695D722BC2B3C80041E666 /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E695D712BC2B3C80041E666 /* BottomView.m */; };
+		3E695D782BC301C60041E666 /* FDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E695D772BC301C60041E666 /* FDButton.m */; };
 		3E930B542BBDE31300131028 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B532BBDE31300131028 /* AppDelegate.m */; };
 		3E930B572BBDE31300131028 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B562BBDE31300131028 /* SceneDelegate.m */; };
 		3E930B5A2BBDE31300131028 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B592BBDE31300131028 /* ViewController.m */; };
@@ -58,6 +61,12 @@
 		3E55350A2BBF36BF0028D269 /* Coordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coordinator.m; sourceTree = "<group>"; };
 		3E695D662BC28CFB0041E666 /* SceneFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneFactory.h; sourceTree = "<group>"; };
 		3E695D672BC28CFB0041E666 /* SceneFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneFactory.m; sourceTree = "<group>"; };
+		3E695D6A2BC2B3140041E666 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3E695D6B2BC2B3140041E666 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3E695D702BC2B3C80041E666 /* BottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomView.h; sourceTree = "<group>"; };
+		3E695D712BC2B3C80041E666 /* BottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomView.m; sourceTree = "<group>"; };
+		3E695D762BC301C60041E666 /* FDButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDButton.h; sourceTree = "<group>"; };
+		3E695D772BC301C60041E666 /* FDButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDButton.m; sourceTree = "<group>"; };
 		3E930B4F2BBDE31300131028 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E930B522BBDE31300131028 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E930B532BBDE31300131028 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,6 +184,67 @@
 			path = SceneFactory;
 			sourceTree = "<group>";
 		};
+		3E695D692BC2B2E20041E666 /* AuthScene */ = {
+			isa = PBXGroup;
+			children = (
+				3E695D6F2BC2B3B10041E666 /* Presenters */,
+				3E695D6E2BC2B3AC0041E666 /* Controllers */,
+				3E695D6D2BC2B3A60041E666 /* Views */,
+			);
+			path = AuthScene;
+			sourceTree = "<group>";
+		};
+		3E695D6D2BC2B3A60041E666 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E695D702BC2B3C80041E666 /* BottomView.h */,
+				3E695D712BC2B3C80041E666 /* BottomView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E695D6E2BC2B3AC0041E666 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E695D6A2BC2B3140041E666 /* LoginViewController.h */,
+				3E695D6B2BC2B3140041E666 /* LoginViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3E695D6F2BC2B3B10041E666 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3E695D732BC3015D0041E666 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E695D762BC301C60041E666 /* FDButton.h */,
+				3E695D772BC301C60041E666 /* FDButton.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E695D742BC301690041E666 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3EEAFCE82BC04E5B00A1B236 /* Onboarding */,
+				3E695D692BC2B2E20041E666 /* AuthScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3E695D752BC3018C0041E666 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3E695D652BC28CE00041E666 /* SceneFactory */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		3E930B462BBDE31200131028 = {
 			isa = PBXGroup;
 			children = (
@@ -265,8 +335,9 @@
 		3EEAFCE72BC04E2700A1B236 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
-				3E695D652BC28CE00041E666 /* SceneFactory */,
-				3EEAFCE82BC04E5B00A1B236 /* Onboarding */,
+				3E695D752BC3018C0041E666 /* Factory */,
+				3E695D742BC301690041E666 /* Scenes */,
+				3E695D732BC3015D0041E666 /* Views */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -366,17 +437,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E695D782BC301C60041E666 /* FDButton.m in Sources */,
 				3EEAFCE02BC02A9000A1B236 /* ListCoordinator.m in Sources */,
 				3E930B5A2BBDE31300131028 /* ViewController.m in Sources */,
 				3E5534FD2BBF2C610028D269 /* UIColor+Hex.m in Sources */,
 				3E930B542BBDE31300131028 /* AppDelegate.m in Sources */,
 				3E3565372BC1EABB00215AF3 /* UserStorage.m in Sources */,
+				3E695D722BC2B3C80041E666 /* BottomView.m in Sources */,
 				3EEAFCD12BC019AE00A1B236 /* AppCoordinator.m in Sources */,
 				3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */,
 				3EEAFCE32BC02A9D00A1B236 /* ProfileCoordinator.m in Sources */,
 				3EEAFCEE2BC04EE100A1B236 /* OnboardingViewPresenter.m in Sources */,
 				3EEAFCEB2BC04E7100A1B236 /* OnboardingViewController.m in Sources */,
 				3EEAFCDD2BC02A7800A1B236 /* OrderCoordinator.m in Sources */,
+				3E695D6C2BC2B3140041E666 /* LoginViewController.m in Sources */,
 				3E3565332BC1840700215AF3 /* OnboardingPartViewController.m in Sources */,
 				3E55350B2BBF36BF0028D269 /* Coordinator.m in Sources */,
 				3E930B652BBDE31400131028 /* main.m in Sources */,

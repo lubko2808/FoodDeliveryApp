@@ -8,6 +8,7 @@
 #import "OnboardingViewController.h"
 #import "UIColor+AppColors.h"
 #import "UIFont+Roboto.h"
+#import "FDButton.h"
 
 @interface OnboardingViewController ()
 
@@ -18,7 +19,9 @@
 // MARK: - Views
 @property (nonatomic, strong) UIPageViewController* pageViewController;
 @property (nonatomic, strong) UIPageControl* pageControl;
-@property (nonatomic, strong) UIButton* bottomButton;
+//@property (nonatomic, strong) UIButton* bottomButton;
+@property (nonatomic, strong) FDButton* bottomButton;
+
 
 @end
 
@@ -43,7 +46,7 @@ static NSInteger const cPage4 = 3;
     if (self) {
         _pages = pages;
         _viewOutput = viewOuput;
-        _bottomButton = [UIButton new];
+        _bottomButton = [[FDButton alloc] initWithSceme:FDButtonColorSchemeGray];
         _currentPageIndex = 0;
             
     }
@@ -110,14 +113,11 @@ static NSInteger const cPage4 = 3;
 
 - (void)setupButton {
     [self.view addSubview:self.bottomButton];
-    self.bottomButton.translatesAutoresizingMaskIntoConstraints = NO;
-    self.bottomButton.backgroundColor = [UIColor grey];
-    self.bottomButton.titleLabel.font = [UIFont getRobotoFont:RobotoBold size:18];
-    self.bottomButton.titleLabel.textColor = [UIColor black];
-    [self.bottomButton setTitleColor:[UIColor black] forState:UIControlStateNormal];
-    self.bottomButton.layer.cornerRadius = 24;
-    [self.bottomButton setTitle:@"Next" forState:UIControlStateNormal];
-    [self.bottomButton addTarget:self action:@selector(onButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+
+    __weak typeof(self) weakSelf = self;
+    self.bottomButton.action = ^{
+        [weakSelf onButtonPressed];
+    }; 
     
     [NSLayoutConstraint activateConstraints:@[
         [self.bottomButton.bottomAnchor constraintEqualToAnchor: self.pageControl.bottomAnchor constant:-44],
@@ -125,8 +125,7 @@ static NSInteger const cPage4 = 3;
         [self.bottomButton.trailingAnchor constraintEqualToAnchor: self.view.trailingAnchor constant:-30],
         [self.bottomButton.heightAnchor constraintEqualToConstant:50]
     ]];
-    
-    
+
 }
 
 // MARK: - UIPageViewControllerDataSource

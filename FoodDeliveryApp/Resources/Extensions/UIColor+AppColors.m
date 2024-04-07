@@ -10,21 +10,26 @@
 
 @implementation UIColor (appColors)
 
-+(UIColor*)accentOrange {
++ (UIColor*)accentOrange {
     return [UIColor hexFromRgb:0xD35400];
 }
-+(UIColor*)grey {
++ (UIColor*)gray {
     return [UIColor hexFromRgb:0xECF0F1];
 }
-+(UIColor*)black {
++ (UIColor*)black {
     return [UIColor hexFromRgb:0x000000];
 }
-+(UIColor*)background {
++( UIColor*)background {
     return [UIColor hexFromRgb:0xE5E5E5];
 }
 
-+(UIColor*)white {
++ (UIColor*)white {
     return UIColor.whiteColor;
 }
+
++ (UIColor*)dividerGray {
+    return [[UIColor hexFromRgb:0x34495E] colorWithAlphaComponent:0.3];
+}
+
 
 @end

@@ -11,11 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (appColors)
 
-+(UIColor*)accentOrange;
-+(UIColor*)grey;
-+(UIColor*)black;
-+(UIColor*)background;
-+(UIColor*)white;
++ (UIColor*)accentOrange;
++ (UIColor*)gray;
++ (UIColor*)black;
++ (UIColor*)background;
++ (UIColor*)white;
++ (UIColor*)dividerGray;
 
 @end
 

@@ -14,6 +14,7 @@
 #import "TabBarController.h"
 #import "UserStorage.h"
 #import "SceneFactory.h"
+#import "LoginViewController.h"
 
 @implementation AppCoordinator
 
@@ -25,6 +26,9 @@
 //        [self showOnboardingFlow];
 //    }
     [self showOnboardingFlow];
+//    LoginViewController* loginVC = [LoginViewController new];
+//    [self.navigationController pushViewController:loginVC animated:YES];
+    
 }
 
 - (void)finish {
