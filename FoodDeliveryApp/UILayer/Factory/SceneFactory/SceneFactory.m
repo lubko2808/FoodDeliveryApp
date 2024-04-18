@@ -91,4 +91,22 @@
     return tabBarController;
 }
 
++ (LoginViewController*)makeAuthSceneWithCoordinator:(AppCoordinator *)coordinator {
+    LoginViewPresenter* presenter = [[LoginViewPresenter alloc] initWithCoordinator:coordinator viewInput:nil];
+    LoginViewController* controller = [[LoginViewController alloc] initWithViewOutput:presenter state:LoginViewStateInitial];
+    return controller;
+}
+
++ (LoginViewController*)makeSignInSceneWithCoordinator:(AppCoordinator *)coordinator {
+    LoginViewPresenter* presenter = [[LoginViewPresenter alloc] initWithCoordinator:coordinator viewInput:nil];
+    LoginViewController* controller = [[LoginViewController alloc] initWithViewOutput:presenter state:LoginViewStateSignIn];
+    return controller;
+}
+
++ (LoginViewController*)makeSignUpSceneWithCoordinator:(AppCoordinator *)coordinator {
+    LoginViewPresenter* presenter = [[LoginViewPresenter alloc] initWithCoordinator:coordinator viewInput:nil];
+    LoginViewController* controller = [[LoginViewController alloc] initWithViewOutput:presenter state:LoginViewStateSignUp];
+    return controller;
+}
+
 @end

@@ -10,11 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppCoordinator : Coordinator <CoordinatorFinishDelegate>
+@interface AppCoordinator : Coordinator <CoordinatorFinishDelegate> 
 
-- (void)showOnboardingFlow;
+- (void)showSignInScene;
 
-- (void)showMainFlow;
+- (void)showSignUpScene;
 
 @end
 

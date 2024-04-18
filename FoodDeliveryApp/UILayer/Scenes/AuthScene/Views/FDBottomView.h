@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BottomView : UIView
+@interface FDBottomView : UIView
 
 @property (nonatomic, strong, nullable) void(^googleButtonTapped)(void);
 @property (nonatomic, strong, nullable) void(^facebookButtonTapped)(void);

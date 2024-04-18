@@ -5,11 +5,11 @@
 //  Created by Lubomyr Chorniak on 07.04.2024.
 //
 
-#import "BottomView.h"
+#import "FDBottomView.h"
 #import "UIFont+Roboto.h"
 #import "UIColor+AppColors.h"
 
-@interface BottomView ()
+@interface FDBottomView ()
 
 @property (nonatomic, strong) UILabel* label;
 @property (nonatomic, strong) UIView* dividerView;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation BottomView
+@implementation FDBottomView
 
 - (instancetype)init
 {

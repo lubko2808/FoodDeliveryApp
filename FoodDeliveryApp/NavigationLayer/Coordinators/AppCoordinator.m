@@ -19,15 +19,13 @@
 @implementation AppCoordinator
 
 - (void)start {
-//    UserStorage* userStorage = [UserStorage sharedInstance];
-//    if (userStorage.passedOnboarding) {
+    UserStorage* userStorage = [UserStorage sharedInstance];
+    if (userStorage.passedOnboarding) {
+        [self showAuthFlow];
 //        [self showMainFlow];
-//    } else {
-//        [self showOnboardingFlow];
-//    }
-    [self showOnboardingFlow];
-//    LoginViewController* loginVC = [LoginViewController new];
-//    [self.navigationController pushViewController:loginVC animated:YES];
+    } else {
+        [self showOnboardingFlow];
+    }
     
 }
 
@@ -42,7 +40,7 @@
     switch (childCoordinator.type) {
         case CoordinatorTypeOnboarding:
             self.navigationController.viewControllers = @[];
-            [self showMainFlow];
+            [self showAuthFlow];
         case CoordinatorTypeApp:
             return;
         default:
@@ -63,8 +61,25 @@
     if (!self.navigationController) { return; }
     TabBarController* tabBarController = [SceneFactory makeTabBarControllerWithCoordinator:self];
     [self.navigationController pushViewController:tabBarController animated:YES];
-    
 }
 
+- (void)showAuthFlow {
+    if (!self.navigationController) { return; }
+    LoginViewController* vc = [SceneFactory makeAuthSceneWithCoordinator:self];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (void)showSignInScene {
+    if (!self.navigationController) { return; }
+    LoginViewController* vc = [SceneFactory makeSignInSceneWithCoordinator:self];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)showSignUpScene {
+    if (!self.navigationController) { return; }
+    LoginViewController* vc = [SceneFactory makeSignUpSceneWithCoordinator:self];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

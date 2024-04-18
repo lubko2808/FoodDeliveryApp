@@ -10,6 +10,7 @@
 #import "OnboardingCoordinator.h"
 #import "TabBarController.h"
 #import "AppCoordinator.h"
+#import "LoginViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 // MARK: - Main Flow
 + (TabBarController*)makeTabBarControllerWithCoordinator:(AppCoordinator*)coordinator;
+
++ (LoginViewController*)makeAuthSceneWithCoordinator:(AppCoordinator*)coordinator;
+
++ (LoginViewController*)makeSignInSceneWithCoordinator:(AppCoordinator*)coordinator;
+
++ (LoginViewController*)makeSignUpSceneWithCoordinator:(AppCoordinator*)coordinator;
 
 @end
 
