@@ -73,12 +73,14 @@
     [self addSubview:self.bottomLeftImageView];
     self.bottomLeftImageView.image = [UIImage imageNamed:@"BottomViewImage"];
     self.bottomLeftImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.bottomLeftImageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.bottomLeftImageView.clipsToBounds = YES;
     
     [NSLayoutConstraint activateConstraints:@[
         [self.bottomLeftImageView.topAnchor constraintEqualToAnchor:self.dividerView.bottomAnchor constant:18],
-        [self.bottomLeftImageView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:-(282.0 / 4.0)],
-        [self.bottomLeftImageView.heightAnchor constraintEqualToConstant:150],
-        [self.bottomLeftImageView.widthAnchor constraintEqualToConstant:282]
+        [self.bottomLeftImageView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
+        [self.bottomLeftImageView.heightAnchor constraintEqualToConstant:160],
+        [self.bottomLeftImageView.widthAnchor constraintEqualToConstant:250]
 
     ]];
 }

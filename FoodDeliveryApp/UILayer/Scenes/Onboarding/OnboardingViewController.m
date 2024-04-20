@@ -19,7 +19,6 @@
 // MARK: - Views
 @property (nonatomic, strong) UIPageViewController* pageViewController;
 @property (nonatomic, strong) UIPageControl* pageControl;
-//@property (nonatomic, strong) UIButton* bottomButton;
 @property (nonatomic, strong) FDButton* bottomButton;
 
 

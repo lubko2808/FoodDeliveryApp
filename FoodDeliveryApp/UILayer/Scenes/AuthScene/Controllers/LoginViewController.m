@@ -111,6 +111,7 @@
             [self setupTitleLabel];
             [self setupSignInButton];
             [self setupForgorLabel];
+            [self setupNavigationBar];
             break;
         case LoginViewStateSignUp:
             [self setupBottomView];
@@ -121,6 +122,7 @@
             [self setupTitleLabel];
             [self setupSignInButton];
             [self setupForgorLabel];
+            [self setupNavigationBar];
     }
 
 }
@@ -167,9 +169,17 @@
             ]];
             break;
     }
-    
-    
-    
+
+}
+
+- (void)setupNavigationBar {
+    UIImage* backImage = [UIImage imageNamed:@"back"];
+    UIBarButtonItem* backButtonItem = [[UIBarButtonItem alloc] initWithImage:backImage 
+                                                                       style:UIBarButtonItemStylePlain
+                                                                      target:self.navigationController
+                                                                      action:@selector(popViewControllerAnimated:)];
+    self.navigationItem.leftBarButtonItem = backButtonItem;
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor blackColor];
 }
 
 - (void)setupTitleLabel {
