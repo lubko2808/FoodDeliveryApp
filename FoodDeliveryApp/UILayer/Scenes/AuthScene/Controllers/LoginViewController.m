@@ -16,6 +16,11 @@
 // MARK: - Properties
 @property (nonatomic, assign) LoginViewState state;
 @property (nonatomic, strong) id<LoginViewOutput> loginViewOutput;
+@property (nonatomic, assign) BOOL isKeyboardShown;
+@property (nonatomic, assign) CGFloat bottomConstraintValue;
+
+// MARK: - Constraints
+@property (nonatomic, strong) NSLayoutConstraint* stackViewBottomConstraint;
 
 // MARK: - Views
 
@@ -50,7 +55,7 @@
     if (self) {
         _loginViewOutput = viewOutput;
         _state = state;
-        
+        _isKeyboardShown = NO;
     }
     return self;
 }
@@ -60,6 +65,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupLayout];
+    [self setupObservers];
+    
     self.state = LoginViewStateInitial;
     
     __weak typeof(self) weakSelf = self;
@@ -69,6 +76,12 @@
     self.bottomView.facebookButtonTapped = ^{
         [weakSelf facebookButtonTapped];
     };
+}
+
+- (void)dealloc
+{
+    NSLog(@"dealloc");
+    [self stopKeyboardListener];
 }
 
 // MARK: - Action handlers
@@ -125,13 +138,15 @@
         case LoginViewStateSignIn:
             self.signInUsernameTextField = [FDTextField new];
             self.signInPasswordTextField = [FDTextField new];
-            
             [self.verticalStack addArrangedSubview:self.signInUsernameTextField];
             [self.verticalStack addArrangedSubview:self.signInPasswordTextField];
             
+            self.bottomConstraintValue = -262;
+            self.stackViewBottomConstraint = [self.verticalStack.bottomAnchor constraintEqualToAnchor:self.bottomView.topAnchor constant:self.bottomConstraintValue];
+            
             [NSLayoutConstraint activateConstraints:@[
                 [self.verticalStack.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-                [self.verticalStack.bottomAnchor constraintEqualToAnchor:self.bottomView.topAnchor constant:-262]
+                self.stackViewBottomConstraint
             ]];
             break;
         case LoginViewStateSignUp:
@@ -143,9 +158,12 @@
             [self.verticalStack addArrangedSubview:self.signUpPasswordTextField];
             [self.verticalStack addArrangedSubview:self.signUpReneterPasswordTextField];
             
+            self.bottomConstraintValue = -227;
+            self.stackViewBottomConstraint = [self.verticalStack.bottomAnchor constraintEqualToAnchor:self.bottomView.topAnchor constant:self.bottomConstraintValue];
+            
             [NSLayoutConstraint activateConstraints:@[
                 [self.verticalStack.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-                [self.verticalStack.bottomAnchor constraintEqualToAnchor:self.bottomView.topAnchor constant:-227]
+                self.stackViewBottomConstraint
             ]];
             break;
     }
@@ -382,5 +400,59 @@
 - (void)onBackPressed {
     
 }
+
+// MARK: - Observers
+
+- (void)setupObservers {
+    [self startKeyboardListener];
+}
+
+- (void)startKeyboardListener {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+
+    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap)];
+    tapGesture.numberOfTapsRequired = 1;
+    tapGesture.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:tapGesture];
+}
+
+- (void)stopKeyboardListener {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)handleTap {
+    [self.view endEditing:YES];
+}
+
+- (void)keyboardWillShow:(NSNotification*)notification {
+    NSValue* keyboardFrame;
+    if ([notification.userInfo[UIKeyboardFrameEndUserInfoKey] isKindOfClass:[NSValue class]]) {
+        keyboardFrame = notification.userInfo[UIKeyboardFrameEndUserInfoKey];
+    } else { return; }
+
+    CGFloat keyboardHeight = [keyboardFrame CGRectValue].size.height;
+    
+    if (!self.isKeyboardShown) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.stackViewBottomConstraint.constant -= keyboardHeight / 4.0;
+            [self.view layoutIfNeeded];
+            self.isKeyboardShown = YES;
+        }];
+    }
+    
+}
+
+- (void)keyboardWillHide:(NSNotification*)notification {
+    if (self.isKeyboardShown) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.stackViewBottomConstraint.constant = self.bottomConstraintValue;
+            [self.view layoutIfNeeded];
+            self.isKeyboardShown = NO;
+        }];
+    }
+}
+
+
 
 @end
