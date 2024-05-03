@@ -16,6 +16,7 @@
 		3E695D6C2BC2B3140041E666 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E695D6B2BC2B3140041E666 /* LoginViewController.m */; };
 		3E695D722BC2B3C80041E666 /* FDBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E695D712BC2B3C80041E666 /* FDBottomView.m */; };
 		3E695D782BC301C60041E666 /* FDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E695D772BC301C60041E666 /* FDButton.m */; };
+		3E7738522BDA3EAF002DDD0A /* LoginCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7738512BDA3EAF002DDD0A /* LoginCoordinator.m */; };
 		3E930B542BBDE31300131028 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B532BBDE31300131028 /* AppDelegate.m */; };
 		3E930B572BBDE31300131028 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B562BBDE31300131028 /* SceneDelegate.m */; };
 		3E930B5A2BBDE31300131028 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E930B592BBDE31300131028 /* ViewController.m */; };
@@ -69,6 +70,8 @@
 		3E695D712BC2B3C80041E666 /* FDBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDBottomView.m; sourceTree = "<group>"; };
 		3E695D762BC301C60041E666 /* FDButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDButton.h; sourceTree = "<group>"; };
 		3E695D772BC301C60041E666 /* FDButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDButton.m; sourceTree = "<group>"; };
+		3E7738502BDA3EAF002DDD0A /* LoginCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginCoordinator.h; sourceTree = "<group>"; };
+		3E7738512BDA3EAF002DDD0A /* LoginCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginCoordinator.m; sourceTree = "<group>"; };
 		3E930B4F2BBDE31300131028 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E930B522BBDE31300131028 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E930B532BBDE31300131028 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				3E55350A2BBF36BF0028D269 /* Coordinator.m */,
 				3EEAFCCF2BC019AE00A1B236 /* AppCoordinator.h */,
 				3EEAFCD02BC019AE00A1B236 /* AppCoordinator.m */,
+				3E7738502BDA3EAF002DDD0A /* LoginCoordinator.h */,
+				3E7738512BDA3EAF002DDD0A /* LoginCoordinator.m */,
 				3EEAFCD22BC01FB700A1B236 /* OnboardingCoordinator.h */,
 				3EEAFCD32BC01FB700A1B236 /* OnboardingCoordinator.m */,
 				3EEAFCD82BC02A6A00A1B236 /* HomeCoordinator.h */,
@@ -463,6 +468,7 @@
 				3E5535002BBF2DB80028D269 /* UIColor+AppColors.m in Sources */,
 				3EEAFCE32BC02A9D00A1B236 /* ProfileCoordinator.m in Sources */,
 				3EEAFCEE2BC04EE100A1B236 /* OnboardingViewPresenter.m in Sources */,
+				3E7738522BDA3EAF002DDD0A /* LoginCoordinator.m in Sources */,
 				3EEAFCEB2BC04E7100A1B236 /* OnboardingViewController.m in Sources */,
 				3EEAFCDD2BC02A7800A1B236 /* OrderCoordinator.m in Sources */,
 				3E695D6C2BC2B3140041E666 /* LoginViewController.m in Sources */,

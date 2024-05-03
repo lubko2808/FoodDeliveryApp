@@ -11,12 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol LoginViewInput <NSObject>
 
-- (void)onSignInTapped;
-- (void)onSignUpTapped;
-- (void)onFacebookTapped;
-- (void)onGoogleTapped;
-- (void)onForgorPasswordTapped;
-- (void)onBackPressed;
+- (void)startLoader;
+- (void)stopLoader;
 
 @end
 

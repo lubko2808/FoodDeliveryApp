@@ -39,8 +39,12 @@
     
     switch (childCoordinator.type) {
         case CoordinatorTypeOnboarding:
-            self.navigationController.viewControllers = @[];
             [self showAuthFlow];
+            self.navigationController.viewControllers = @[self.navigationController.viewControllers.lastObject];
+        case CoordinatorTypeLogin:
+            [self showMainFlow];
+            self.navigationController.viewControllers = @[self.navigationController.viewControllers.lastObject];
+            return;
         case CoordinatorTypeApp:
             return;
         default:
@@ -52,7 +56,11 @@
 // MARK: - Navigation methods
 - (void)showOnboardingFlow {
     if (!self.navigationController) { return; }
-    OnboardingCoordinator* onboardingCoordinator = [[OnboardingCoordinator alloc] initWithChildCoordinators:[NSMutableArray new] type:CoordinatorTypeOnboarding navigationController:self.navigationController finishDelegate:self];
+    OnboardingCoordinator* onboardingCoordinator = [[OnboardingCoordinator alloc]
+                                                    initWithChildCoordinators:[NSMutableArray new]
+                                                    type:CoordinatorTypeOnboarding
+                                                    navigationController:self.navigationController
+                                                    finishDelegate:self];
     [self addChildCoordinator:onboardingCoordinator];
     [onboardingCoordinator start];
 }
@@ -65,21 +73,14 @@
 
 - (void)showAuthFlow {
     if (!self.navigationController) { return; }
-    LoginViewController* vc = [SceneFactory makeAuthSceneWithCoordinator:self];
-    [self.navigationController pushViewController:vc animated:YES];
+    LoginCoordinator* loginCoordinator = [[LoginCoordinator alloc]
+                                          initWithChildCoordinators:[NSMutableArray new]
+                                          type:CoordinatorTypeLogin
+                                          navigationController:self.navigationController
+                                          finishDelegate:self];
+    [self addChildCoordinator:loginCoordinator];
+    [loginCoordinator start];
 }
 
-
-- (void)showSignInScene {
-    if (!self.navigationController) { return; }
-    LoginViewController* vc = [SceneFactory makeSignInSceneWithCoordinator:self];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (void)showSignUpScene {
-    if (!self.navigationController) { return; }
-    LoginViewController* vc = [SceneFactory makeSignUpSceneWithCoordinator:self];
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 @end

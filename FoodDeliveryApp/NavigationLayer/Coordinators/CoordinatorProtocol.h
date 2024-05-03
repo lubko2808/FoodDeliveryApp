@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, CoordinatorType) {
     CoordinatorTypeApp,
     CoordinatorTypeOnboarding,
+    CoordinatorTypeLogin,
     CoordinatorTypeHome,
     CoordinatorTypeOrder,
     CoordinatorTypeList,

@@ -11,6 +11,7 @@
 #import "TabBarController.h"
 #import "AppCoordinator.h"
 #import "LoginViewController.h"
+#import "LoginCoordinator.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,11 +23,13 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: - Main Flow
 + (TabBarController*)makeTabBarControllerWithCoordinator:(AppCoordinator*)coordinator;
 
-+ (LoginViewController*)makeAuthSceneWithCoordinator:(AppCoordinator*)coordinator;
+// MARK: - Auth Flow
 
-+ (LoginViewController*)makeSignInSceneWithCoordinator:(AppCoordinator*)coordinator;
++ (LoginViewController*)makeAuthSceneWithCoordinator:(LoginCoordinator*)coordinator;
 
-+ (LoginViewController*)makeSignUpSceneWithCoordinator:(AppCoordinator*)coordinator;
++ (LoginViewController*)makeSignInSceneWithCoordinator:(LoginCoordinator*)coordinator;
+
++ (LoginViewController*)makeSignUpSceneWithCoordinator:(LoginCoordinator*)coordinator;
 
 @end
 

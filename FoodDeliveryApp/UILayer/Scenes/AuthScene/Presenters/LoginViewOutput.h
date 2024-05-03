@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol LoginViewOutput <NSObject>
 
-- (void)loginStart;
+- (void)startLoginWithUsername:(NSString*)username password:(NSString*)password;
 - (void)registrationStart;
 - (void)goToFacebookLogin;
 - (void)goToGoogleLogin;

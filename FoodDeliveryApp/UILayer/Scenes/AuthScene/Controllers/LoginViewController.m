@@ -27,7 +27,8 @@
 @property (nonatomic, strong) UILabel* titleLabel;
 @property (nonatomic, strong) UILabel* forgotLabel;
 @property (nonatomic, strong) UIStackView* verticalStack;
-
+@property (nonatomic, strong) UIActivityIndicatorView* loader;
+@property (nonatomic, strong) UIView* loaderContainer;
 
 // MARK: - Sign In
 @property (nonatomic, strong) FDTextField* signInUsernameTextField;
@@ -53,9 +54,10 @@
 - (instancetype)initWithViewOutput:(id<LoginViewOutput>)viewOutput state:(LoginViewState)state {
     self = [super init];
     if (self) {
-        _loginViewOutput = viewOutput;
         _state = state;
+        _loginViewOutput = viewOutput;
         _isKeyboardShown = NO;
+        _loader = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
     }
     return self;
 }
@@ -66,16 +68,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupLayout];
     [self setupObservers];
-    
-    self.state = LoginViewStateInitial;
-    
-    __weak typeof(self) weakSelf = self;
-    self.bottomView.googleButtonTapped = ^{
-        [weakSelf googleButtonTapped];
-    };
-    self.bottomView.facebookButtonTapped = ^{
-        [weakSelf facebookButtonTapped];
-    };
+        
 }
 
 - (void)dealloc
@@ -124,6 +117,7 @@
             [self setupForgorLabel];
             [self setupNavigationBar];
     }
+    [self setupLoaderView];
 
 }
 
@@ -326,14 +320,20 @@
     [self.view addSubview:self.bottomView];
     self.bottomView.translatesAutoresizingMaskIntoConstraints = NO;
     
+    __weak typeof(self) weakSelf = self;
+    self.bottomView.facebookButtonTapped = ^{
+        [weakSelf onFacebookTapped];
+    };
+    self.bottomView.googleButtonTapped = ^{
+        [weakSelf onGoogleTapped];
+    };
+    
     [NSLayoutConstraint activateConstraints:@[
         [self.bottomView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor],
         [self.bottomView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
         [self.bottomView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
         [self.bottomView.heightAnchor constraintEqualToConstant:150]
     ]];
-    
-    
 }
 
 - (void)setupSignUpPasswordTextField {
@@ -369,7 +369,28 @@
     ]];
 }
 
-// MARK: - LoginViewInput
+- (void)setupLoaderView {
+    self.loaderContainer = [UIView new];
+    [self.view addSubview:self.loaderContainer];
+    self.loaderContainer.translatesAutoresizingMaskIntoConstraints = NO;
+    self.loaderContainer.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+    self.loaderContainer.hidden = YES;
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [self.loaderContainer.widthAnchor constraintEqualToAnchor:self.view.widthAnchor],
+        [self.loaderContainer.heightAnchor constraintEqualToAnchor:self.view.heightAnchor]
+    ]];
+    
+    [self.loaderContainer addSubview:self.loader];
+    self.loader.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.loader.centerXAnchor constraintEqualToAnchor:self.loaderContainer.centerXAnchor],
+        [self.loader.centerYAnchor constraintEqualToAnchor:self.loaderContainer.centerYAnchor]
+    ]];
+    
+}
+
+// MARK: - Private Methods
 
 - (void)onSignInTapped {
     switch (self.state) {
@@ -377,6 +398,7 @@
             [self.loginViewOutput goToSignIn];
             break;
         case LoginViewStateSignIn:
+            [self.loginViewOutput startLoginWithUsername:self.signInUsernameTextField.text password:self.signInPasswordTextField.text];
             break;
         case LoginViewStateSignUp:
             break;
@@ -396,11 +418,11 @@
 }
 
 - (void)onFacebookTapped {
-    
+    NSLog(@"onFacebookTapped");
 }
 
 - (void)onGoogleTapped {
-    
+    NSLog(@"onGoogleTapped");
 }
 
 - (void)onForgorPasswordTapped {
@@ -409,6 +431,18 @@
 
 - (void)onBackPressed {
     
+}
+
+// MARK: - LoginViewInput
+
+- (void)startLoader {
+    self.loaderContainer.hidden = NO;
+    [self.loader startAnimating];
+}
+
+- (void)stopLoader {
+    self.loaderContainer.hidden = YES;
+    [self.loader stopAnimating];
 }
 
 // MARK: - Observers

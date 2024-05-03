@@ -21,7 +21,7 @@
 {
     self = [super init];
     if (self) {
-        self.button = [UIButton new]; 
+        _button = [UIButton new];
         _scheme = FDButtonColorSchemeWhite;
         self.backgroundColor = [UIColor white];
         [self setupButton];

@@ -10,12 +10,15 @@
 #import "LoginViewController.h"
 #import "LoginViewInput.h"
 #import "LoginViewOutput.h"
+#import "LoginCoordinator.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginViewPresenter : NSObject <LoginViewOutput>
 
-- (instancetype)initWithCoordinator:(AppCoordinator*)coordinator viewInput:(_Nullable id<LoginViewInput>)viewInput;
+@property (nonatomic, weak) id<LoginViewInput> viewInput;
+
+- (instancetype)initWithCoordinator:(LoginCoordinator*)coordinator viewInput:(_Nullable id<LoginViewInput>)viewInput;
 
 @end
 
