@@ -20,12 +20,12 @@
 
 - (void)start {
     UserStorage* userStorage = [UserStorage sharedInstance];
-    if (userStorage.passedOnboarding) {
-        [self showAuthFlow];
-//        [self showMainFlow];
-    } else {
-        [self showOnboardingFlow];
-    }
+//    if (userStorage.passedOnboarding) {
+//        [self showAuthFlow];
+//    } else {
+//        [self showOnboardingFlow];
+//    }
+    [self showMainFlow];
     
 }
 

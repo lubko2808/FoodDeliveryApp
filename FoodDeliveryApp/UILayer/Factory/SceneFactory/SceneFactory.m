@@ -50,7 +50,7 @@
     UINavigationController* homeNavigationController = [UINavigationController new];
     homeNavigationController.tabBarItem = [[UITabBarItem alloc]
                                            initWithTitle:@"Home"
-                                           image:[UIImage systemImageNamed:@"swirl.circle.righthalf.filled"]
+                                           image:[UIImage imageNamed:@"home"]
                                            tag:0];
     
     HomeCoordinator* homeCoordinator = [[HomeCoordinator alloc]
@@ -63,7 +63,7 @@
     UINavigationController* orderNavigationController = [UINavigationController new];
     orderNavigationController.tabBarItem = [[UITabBarItem alloc]
                                             initWithTitle:@"Order"
-                                            image:[UIImage systemImageNamed:@"swirl.circle.righthalf.filled"]
+                                            image:[UIImage imageNamed:@"order"]
                                             tag:1];
     
     OrderCoordinator* orderCoordinator = [[OrderCoordinator alloc]
@@ -76,7 +76,7 @@
     UINavigationController* listNavigationController = [UINavigationController new];
     listNavigationController.tabBarItem = [[UITabBarItem alloc]
                                            initWithTitle:@"List"
-                                           image:[UIImage systemImageNamed:@"swirl.circle.righthalf.filled"]
+                                           image:[UIImage imageNamed:@"list"]
                                            tag:2];
     
     ListCoordinator* listCoordinator = [[ListCoordinator alloc]
@@ -89,7 +89,7 @@
     UINavigationController* profileNavigationController = [UINavigationController new];
     profileNavigationController.tabBarItem = [[UITabBarItem alloc] 
                                               initWithTitle:@"Profile"
-                                              image:[UIImage systemImageNamed:@"swirl.circle.righthalf.filled"]
+                                              image:[UIImage imageNamed:@"profile"]
                                               tag:3];
     
     ProfileCoordinator* profileCoordinator = [[ProfileCoordinator alloc]
